@@ -212,15 +212,15 @@ export default function Footer() {
           <div className="flex items-start gap-3">
             <FaPhoneAlt className="text-orange-400 mt-1" />
             <div>
-              <p>01613410880</p>
-              <p>01577006071</p>
+              <p>01627894628</p>
+              <p>01758080227</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <FaEnvelope className="text-orange-400 mt-1" />
             <div>
-              <p>aftabfarhan324@gmail.com</p>
-              <p>aftabarkofarhan@gmail.com</p>
+              <p>fuadvai95@gmail.com</p>
+              <p>fuadvai95@gmail.com</p>              
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function Footer() {
           } text-sm`}
         >
           BookCourier is your go-to online bookstore for quick and reliable book
-          delivery. - © 2025 All Rights Reserved
+          delivery. - © 2026 All Rights Reserved
         </div>
       </div>
 
