@@ -17,6 +17,7 @@ import { CreditCard } from "lucide-react";
 import LoadingSpinner from "../shared/LoadingSpinner ";
 import useRole from "../hooks/useRole";
 import { HiMenuAlt3 } from "react-icons/hi";
+import logo from "../../src/assets/book.png"
 
 const DashBordLayOut = () => {
   const { user, loding, userLogOut } = useAuth();
@@ -52,10 +53,13 @@ const DashBordLayOut = () => {
               </NavLink>
             </div>
             {/* LOGO */}
-            <div className="flex items-center gap-2 text-primary">
-              <FaBookReader className="w-6 h-6" />
-              <span className="text-xl font-semibold">BookCourier</span>
-            </div>
+           <div className="flex items-center gap-3">
+                       
+                       <div className="navbar-start flex  items-center ">             
+                       <img src={logo} alt="" className="h-1/3 w-52" />
+                       </div> 
+                       
+                     </div>
           </div>
 
           {/* Avatar */}
