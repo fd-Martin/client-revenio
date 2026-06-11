@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+}
+
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+
+
+a.active {
+    @apply text-primary
+}
+
+
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+    --color-primary: #C2410C;
+    --color-newa: #FACC15;
+    --color-secondary: #C2410C;
+    --color-mytext: #6B7280;
+    --color-thried: #FFF7ED;
+     
+}
+
+.button{
+  @apply  bg-gradient-to-br from-orange-400 to-orange-600
+}
