@@ -43,11 +43,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element:<About></About>
+        element: <About></About>,
       },
       {
         path: "/coverage",
-        element:<CversArea ></CversArea>
+        element: <CversArea></CversArea>,
       },
       {
         path: "/books",
@@ -69,15 +69,23 @@ export const router = createBrowserRouter([
           </PrivetRoute>
         ),
       },
-      
+
       {
         path: "/detlicesPages/:id",
         element: (
-          <PrivetRoute>
-            <DetlicesPages></DetlicesPages>{" "}
-          </PrivetRoute>
+          // <PrivetRoute>
+          <DetlicesPages></DetlicesPages>
+          // </PrivetRoute>
         ),
       },
+      // {
+      //   path: "/detlicesPages/:id",
+      //   element: (
+      //     <PrivetRoute>
+      //       <DetlicesPages></DetlicesPages>{" "}
+      //     </PrivetRoute>
+      //   ),
+      // },
 
       {
         path: "*",
@@ -105,40 +113,124 @@ export const router = createBrowserRouter([
     ],
   },
   // Dashbord
- {
-  path: "/deshbord",
-  element: (
-    <PrivetRoute>
-      <DashBordLayOut />
-    </PrivetRoute>
-  ),
-  children: [
-    {
-      index: true,
-      element: <AutoRedirectDashboard />
-    },
+  {
+    path: "/deshbord",
+    element: (
+      <PrivetRoute>
+        <DashBordLayOut />
+      </PrivetRoute>
+    ),
+    children: [
+      {
+        index: true,
+        element: <AutoRedirectDashboard />,
+      },
 
-    { path: "addbooks", element: <LibrarianRoute><AddBookLibery /></LibrarianRoute> },
-    { path: "userorder", element: <UserRoute><UserOrderTable /></UserRoute> },
-    { path: "pymentSuccess", element: <PaymentSuccess /> },
-    { path: "paymenthistory", element: <UserRoute><PaymentHistory /></UserRoute> },
-    { path: "myBooks", element: <LibrarianRoute><MyBooks /></LibrarianRoute> },
-    { path: "orderAllBooks", element: <LibrarianRoute><OrderAllBooks /></LibrarianRoute> },
+      {
+        path: "addbooks",
+        element: (
+          <LibrarianRoute>
+            <AddBookLibery />
+          </LibrarianRoute>
+        ),
+      },
+      {
+        path: "userorder",
+        element: (
+          <UserRoute>
+            <UserOrderTable />
+          </UserRoute>
+        ),
+      },
+      { path: "pymentSuccess", element: <PaymentSuccess /> },
+      {
+        path: "paymenthistory",
+        element: (
+          <UserRoute>
+            <PaymentHistory />
+          </UserRoute>
+        ),
+      },
+      {
+        path: "myBooks",
+        element: (
+          <LibrarianRoute>
+            <MyBooks />
+          </LibrarianRoute>
+        ),
+      },
+      {
+        path: "orderAllBooks",
+        element: (
+          <LibrarianRoute>
+            <OrderAllBooks />
+          </LibrarianRoute>
+        ),
+      },
 
-    { path: "adminuserDataSloved", element: <AdminRoute><AlluserData /></AdminRoute> },
-    { path: "manazeBooks", element: <AdminRoute><ManazeBooks /></AdminRoute> },
+      {
+        path: "adminuserDataSloved",
+        element: (
+          <AdminRoute>
+            <AlluserData />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "manazeBooks",
+        element: (
+          <AdminRoute>
+            <ManazeBooks />
+          </AdminRoute>
+        ),
+      },
 
-    { path: "admin", element: <AdminRoute><AdminDashBord /></AdminRoute> },
-    { path: "user", element: <UserRoute><UserDashBord /></UserRoute> },
-    { path: "libraian", element: <LibrarianRoute><LibrarianDashBord /></LibrarianRoute> },
+      {
+        path: "admin",
+        element: (
+          <AdminRoute>
+            <AdminDashBord />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "user",
+        element: (
+          <UserRoute>
+            <UserDashBord />
+          </UserRoute>
+        ),
+      },
+      {
+        path: "libraian",
+        element: (
+          <LibrarianRoute>
+            <LibrarianDashBord />
+          </LibrarianRoute>
+        ),
+      },
 
-    { path: "profileLoginUser", element: <Profile /> },
-    { path: "settings", element: <PrivetRoute><SettingsComponent /></PrivetRoute> },
-    { path: "whishList", element: <UserRoute><WishLise /></UserRoute> },
+      { path: "profileLoginUser", element: <Profile /> },
+      {
+        path: "settings",
+        element: (
+          <PrivetRoute>
+            <SettingsComponent />
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "whishList",
+        element: (
+          <UserRoute>
+            <WishLise />
+          </UserRoute>
+        ),
+      },
 
-    { path: "*", Component: NotFound404 }
-  ],
-},
+      { path: "*", Component: NotFound404 },
+    ],
+  },
 
   {
     path: "*",

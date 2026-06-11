@@ -18,7 +18,7 @@ import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { GiSpellBook } from "react-icons/gi";
 import { FaUserCog } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa6";
-
+import logo from "../../assets/book.png"
 import { FaBookReader } from "react-icons/fa";
 import { Link, NavLink } from "react-router";
 import { FiUser } from "react-icons/fi";
@@ -90,10 +90,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
-            <FaBookReader className="h-6 w-6  text-primary" />
-            <div className="navbar-start flex  items-center">
-              <span className=" text-xl text-primary mt-1">BookCourier </span>
-            </div>
+            
+            <div className="navbar-start flex  items-center ">             
+            <img src={logo} alt="" className="h-1/3 w-52" />
+            </div> 
+            
           </div>
 
           {/* Desktop Navigation */}
